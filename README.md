@@ -62,29 +62,33 @@ Connect the battery to the Arduino Nicla Sense ME as follows: (after uploading t
 
 ### Installation
   * Clone or download this repository to your computer.
-  * Open the ble_heart_rate.ino sketch in the Arduino IDE.
+  * Open the `ble_heart_rate.ino` sketch in the Arduino IDE.
   * Install required board managers
   * Install the required libraries
   * Connect the Arduino board to your computer via USB.
   * Select the board and port in the Arduino IDE (the Nicla Sense ME is automatically detected in the Arduino IDE 2).
   * Upload the sketch to the Arduino board.
 
-NB: * Test the results with the serial monitor before deploying 
-    * Comment out serial communication code when deploying for efficient execution
+NB:
+  * Test the results with the serial monitor before deploying 
+  * Comment out serial communication code when deploying for efficient execution
 
 ### Usage
-  * Disconnect the board from the computer and connect the battery to power it.
-<!-- how to config app -->
+  * Disconnect the board from the computer and connect the battery to power it.     <!-- how to config app -->
   * Scan for available BLE devices on in the app and connect to the Arduino board.
   * The heart rate and SpO2 readings will be displayed on the central device in real-time.<!-- steps to view data -->
 
 
 ## Project Overview and Functionality
 ### Heart Rate Measurement
-The system uses the principle of photoplethysmography (PPG) to measure heart rate. PPG involves the detection of changes in the light absorption of blood vessels, which is caused by the pulsatile flow of blood. The MAX30102 pulse oximeter has two LEDs, a red LED and an infrared (IR) LED, which are used to emit light into the blood vessels. The light that is transmitted through the blood vessels is detected by a photodetector, which generates a signal that is processed to measure the heart rate.
+The system uses the principle of photoplethysmography (PPG) to measure heart rate. PPG involves the detection of changes in the light absorption of blood vessels, which is caused by the pulsatile flow of blood.
+
+The MAX30102 pulse oximeter has two LEDs, a red LED and an infrared (IR) LED, which are used to emit light into the blood vessels. The light that is transmitted through the blood vessels is detected by a photodetector, which generates a signal that is processed to measure the heart rate.
 
 ### Pulse Oximetry
-The system also uses pulse oximetry to measure blood oxygen levels. Pulse oximetry is based on the principle that the amount of RED and IR light absorbed varies depending on the amount of oxygen in your blood. The MAX30102 pulse oximeter measures the amount of light absorbed by the blood vessels and uses this information to calculate blood oxygen levels.
+The system also uses pulse oximetry to measure blood oxygen levels. Pulse oximetry is based on the principle that the amount of RED and IR light absorbed varies depending on the amount of oxygen in your blood.
+
+The MAX30102 pulse oximeter measures the amount of light absorbed by the blood vessels and uses this information to calculate blood oxygen levels.
 
 
 
